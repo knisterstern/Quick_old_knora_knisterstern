@@ -1,0 +1,113 @@
+#!/usr/bin/expect
+
+set timeout 120
+spawn openrdf-console/bin/console.sh --force --echo --serverURL [lindex $argv 0]
+set prompt "> "
+expect $prompt
+send "open knora-test .\r"
+expect $prompt
+send "load ../../knora-ontologies/knora-base.ttl into http://www.knora.org/ontology/knora-base .\r"
+expect $prompt
+send "load ../../knora-ontologies/knora-admin.ttl into http://www.knora.org/ontology/knora-base .\r"
+expect $prompt
+send "load ../../knora-ontologies/standoff-onto.ttl into http://www.knora.org/ontology/standoff .\r"
+expect $prompt
+send "load ../../knora-ontologies/standoff-data.ttl into http://www.knora.org/data/standoff .\r"
+expect $prompt
+send "load ../../knora-ontologies/salsah-gui.ttl into http://www.knora.org/ontology/salsah-gui .\r"
+expect $prompt
+send "load ../nie-dependency/all_data/admin-data.ttl into http://www.knora.org/data/admin .\r"
+expect $prompt
+send "load ../nie-dependency/all_data/permissions-data.ttl into http://www.knora.org/data/permissions .\r"
+expect $prompt
+send "load ../nie-dependency/all_data/system-data.ttl into http://www.knora.org/data/FFFF/SystemProject .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/incunabula-onto.ttl into http://www.knora.org/ontology/incunabula .\r"
+expect $prompt
+send "load ../nie-dependency/all_data/incunabula-data.ttl into http://www.knora.org/data/incunabula .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/dokubib-onto.ttl into http://www.knora.org/ontology/0804/dokubib .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/images-onto.ttl into http://www.knora.org/ontology/00FF/images .\r"
+#expect $prompt
+#send "load ../nie-dependency/demo_data/images-demo-data.ttl into http://www.knora.org/data/00FF/images .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/anything-onto.ttl into http://www.knora.org/ontology/anything .\r"
+#expect $prompt
+#send "load ../nie-dependency/all_data/anything-data.ttl into http://www.knora.org/data/0001/anything .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/something-onto.ttl into http://www.knora.org/ontology/0001/something .\r"
+#expect $prompt
+#send "load ../nie-dependency/ontologies/beol-onto.ttl into http://www.knora.org/ontology/0801/beol .\r"
+#expect $prompt
+#send "load ../nie-dependency/ontologies/biblio-onto.ttl into http://www.knora.org/ontology/0802/biblio .\r"
+#expect $prompt
+#send "load ../nie-dependency/all_data/biblio-data.ttl into http://www.knora.org/data/0802/biblio .\r"
+#expect $prompt
+#send "load ../nie-dependency/all_data/beol-data.ttl into http://www.knora.org/data/0801/beol .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/webern-onto.ttl into http://www.knora.org/ontology/08AE/webern .\r"
+#expect $prompt
+#send "load ../nie-dependency/all_data/webern-data.ttl into http://www.knora.org/data/08AE/webern .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/agent-ontology-knora.ttl into http://www.knora.org/ontology/agent .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/atharvaveda-ontology-knora.ttl into http://www.knora.org/ontology/0041/atharvaveda .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/catholic-orders-ontology-knora.ttl into http://www.knora.org/ontology/0042/catholic-orders .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/catholic-organization-ontology-knora.ttl into http://www.knora.org/ontology/0043/catholic-organization .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/concept-ontology-knora.ttl into http://www.knora.org/ontology/0044/concept .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/device-ontology-knora.ttl into http://www.knora.org/ontology/0045/device .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/drcs-ontology-knora.ttl into http://www.knora.org/ontology/0046/drcs .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/event-ontology-knora.ttl into http://www.knora.org/ontology/0047/event .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/human-ontology-knora.ttl into http://www.knora.org/ontology/human .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/human-geography-ontology-knora.ttl into http://www.knora.org/ontology/0049/human-geography .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/image-ontology-knora.ttl into http://www.knora.org/ontology/004A/image .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/indology-ontology-knora.ttl into http://www.knora.org/ontology/004B/indology .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/information-carrier-ontology-knora.ttl into http://www.knora.org/ontology/004C/information-carrier .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/kuno-raeber-ontology-knora.ttl into http://www.knora.org/ontology/004D/kuno-raeber .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/kuno-raeber-gui-ontology-knora.ttl into http://www.knora.org/ontology/004E/kuno-raeber-gui .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/language-ontology-knora.ttl into http://www.knora.org/ontology/004F/language .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/literature-ontology-knora.ttl into http://www.knora.org/ontology/0050/literature .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/organization-ontology-knora.ttl into http://www.knora.org/ontology/0051/organization .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/philosophies-ontology-knora.ttl into http://www.knora.org/ontology/0052/philosophies .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/philosophy-ontology-knora.ttl into http://www.knora.org/ontology/0053/philosophy .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/physical-geography-ontology-knora.ttl into http://www.knora.org/ontology/0054/physical-geography .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/physical-resource-ontology-knora.ttl into http://www.knora.org/ontology/0055/physical-resource .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/publishing-ontology-knora.ttl into http://www.knora.org/ontology/0056/publishing .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/scholasticism-ontology-knora.ttl into http://www.knora.org/ontology/0057/scholasticism .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/teaching-ontology-knora.ttl into http://www.knora.org/ontology/0058/teaching .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/text-ontology-knora.ttl into http://www.knora.org/ontology/0059/text .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/text-editing-ontology-knora.ttl into http://www.knora.org/ontology/005A/text-editing .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/text-structure-ontology-knora.ttl into http://www.knora.org/ontology/005B/text-structure .\r"
+expect $prompt
+send "load ../nie-dependency/ontologies/nietzsche-ontology-knora.ttl into http://www.knora.org/ontology/08AA/nietzsche .\r"
+expect $prompt
+send "close .\r"
+expect $prompt
+send "exit .\r"

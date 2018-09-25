@@ -1,0 +1,34 @@
+version: "2"
+
+services:
+  graphdb:
+    image: dhlabbasel/graphdb-free
+    ports:
+      - 7200:7200
+    depends_on:
+      - salsah
+
+  knora:
+    image: nieine/knora
+    ports:
+      - 3333:3333
+    depends_on:
+      - graphdb
+    volumes:
+      - ./tmp/webapi_tmp:/tmp/webapi_tmp/
+
+  sipi:
+    image: nieine/sipi
+    ports:
+      - 1024:1024
+    volumes:
+      - ./tmp:/tmp
+      - $HOME:$HOME
+      - ./images:/sipi/images
+      - ./tmp/webapi_tmp:/tmp/webapi_tmp/
+      - ./sipiConfig:/sipi/config
+
+  salsah:
+    image: nieine/salsah
+    ports:
+      - 4200:4200
